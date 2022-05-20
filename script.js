@@ -13317,9 +13317,9 @@ function createUnicodeGameTranscript() {
   console.assert(accumulator.length === 0)
 
   if (transcript.endsWith(greenSquare+greenSquare+greenSquare+greenSquare+greenSquare)) {
-    return "Foodle #" + (targetWords.indexOf(targetWord) + 1) + " " + usedRows + "/6\n" + transcript
+    return "Foodle #" + (targetWords.indexOf(targetWord) + 1) + " " + usedRows + "/6\n" + transcript + "food-le.co"
   } else {
-    return "Foodle #" + (targetWords.indexOf(targetWord) + 1) + " X/6\n" + transcript
+    return "Foodle #" + (targetWords.indexOf(targetWord) + 1) + " X/6\n" + transcript + "food-le.co"
   }
 }
 
