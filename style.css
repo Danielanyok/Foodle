@@ -105,32 +105,16 @@ ion-icon:hover {
         overflow-y: hidden;
       }
 
-      @media only screen and (min-width: 991px) {
-
-        .guess-grid {
-          display: grid;
-          justify-content: center;
-          align-content: center;
-          flex-grow: .5;
-          grid-template-columns: repeat(5, 4em);
-          grid-template-rows: repeat(6, 4em);
-          gap: .25em;
-          margin-bottom: 1em;
-        }
-        }
-        
-        @media only screen and (max-width: 990px) {
-        .guess-grid {
-          display: grid;
-          justify-content: center;
-          align-content: center;
-          flex-grow: .5;
-          grid-template-columns: repeat(5, 3.5em);
-          grid-template-rows: repeat(6, 3.5em);
-          gap: .25em;
-          margin-bottom: 1em;
-        }
-        }
+.guess-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  flex-grow: 1;
+  grid-template-columns: repeat(5, 4em);
+  grid-template-rows: repeat(6, 4em);
+  gap: .25em;
+  margin-bottom: 1em;
+}
 
 :host {
   display: inline-block;
@@ -149,7 +133,7 @@ ion-icon:hover {
   color: var(--tile-text-color);
   text-transform: uppercase;
   user-select: none;
-  transition: transform 250ms linear;
+  transition: transform 250ms linear; // for "flip"
 }
 .tile::before {
   content: '';
@@ -158,7 +142,7 @@ ion-icon:hover {
 }
 
 /* Allow tiles to be smaller on small screens */
-@media (max-height: 600px) {
+@media (max-height: 500px) {
   .tile {
     font-size: 1em;
     line-height: 1em;
@@ -267,7 +251,7 @@ ion-icon:hover {
   width: 100%;
   max-width: var(--game-max-width);
   margin: 0 auto;
-  height: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -338,7 +322,7 @@ header .title {
 }
 #keyboard button.large {
   flex: 1.5;
-  font-size: 12px;
+  font-size: 10px;
 }
 #keyboard button:focus {
   outline: none;
@@ -551,25 +535,13 @@ header .modal-title {
 #settings-modal .control[checked] .knob {
   transform: translateX(calc(100% - 4px));
 }
-
 #nn_skinr,
 #nn_skinl {
     position: absolute;
     left: 50%;
-    margin-left: -930px;
-    text-align: center;
+    margin-left: -1130px;
 }
 
 #nn_skinr {
-    margin-left: 630px;
-    text-align: center;
-}
-
-#Addivlb {
-  text-align: center;
-  width: 100%;
-}
-
-#nn_mobile_lb1 {
-  text-align: center;
+    margin-left: 830px;
 }
